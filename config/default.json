@@ -1,0 +1,4 @@
+{
+  "mongoURI": "mongodb+srv://user1:user1@cluster0-ay2zz.mongodb.net/test",
+  "jwtSecret": "sl_myJwtSecret"
+}
