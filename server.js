@@ -6,7 +6,7 @@ const bodyparser=require('body-parser');
 var app=express();
 
 //getting db config 1
-const mongoURI: "mongodb+srv://user1:user1@cluster0-ay2zz.mongodb.net/test";
+const mongoURI= "mongodb+srv://user1:user1@cluster0-ay2zz.mongodb.net/test";
 const db = process.env.MONGODB_URI|| mongoURI;
 // port 2
 const port=process.env.PORT||5000;
