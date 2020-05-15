@@ -11,11 +11,12 @@
   },
   "devDependencies": {},
   "scripts": {
-  "build":"cd client && npm install",
-    "install-client":"cd client && npm install",
-    "heroku-postbuild":"npm install-client && npm run build",
+  "start": "node server.js",
+  "install-client":" npm install --prefix client",
+  "client":"npm start --prefix client",
+    "heroku-postbuild":"NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    
   },
   "repository": {
     "type": "git",
