@@ -24,14 +24,14 @@ mongoose
 
   app.use('/',deployments);
   process.env.PWD=process.cwd();
-  if(process.env.NODE_ENV==='production'){
+ 
       app.use(express.static(process.env.PWD+"/client/build"))
       app.get('*', (req, res) => { // don't serve api routes to react app
           res.sendFile(process.env.PWD+"/client/build/index.html");
         });
   console.log(path.join(process.env.PWD+"/client/build/index.html"));
   console.log('Serving React App...');
-  }
+  
 
 app.listen(port);
 
