@@ -2,6 +2,7 @@
   "name": "deploy-client",
   "version": "0.1.0",
   "private": true,
+  "proxy":"http://localhost:5000/",
   "engine":{
     "node":"12.16.x",
     "npm":"5.5.x"

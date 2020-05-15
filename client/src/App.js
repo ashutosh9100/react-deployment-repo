@@ -2,6 +2,7 @@ import React, { useState ,useEffect} from "react";
 import "./App.css";
 import TeplateForm from "./Components/TemplateForm";
 import TemplateList from "./Components/TemplateList";
+import BrowserRouter from 'react-router-dom'
 
 export default function App(props) {
 
@@ -15,11 +16,12 @@ export default function App(props) {
 
     
     return (
-        
+        <BrowserRouter>
         <div className="App" >
             <TeplateForm update={update}/>
             <TemplateList data={data} pro={pro}/>
         </div>
+        </BrowserRouter>
        
     );
 }
