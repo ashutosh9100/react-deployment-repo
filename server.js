@@ -3,7 +3,7 @@ const mongoose =require('mongoose');
 const deployments=require('./routes/api/deployments');
 const  cors =require('cors');
 const bodyparser=require('body-parser');
-const pat=require('path');
+const path=require('path');
 var app=express();
 
 //getting db config 1
