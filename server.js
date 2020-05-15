@@ -26,7 +26,7 @@ mongoose
 
   if(process.env.NODE_ENV==='production'){
       app.use(express.static('./client/build'))
-      app.get(/^\/(?!api).*/, (req, res) => { // don't serve api routes to react app
+      app.get('*', (req, res) => { // don't serve api routes to react app
           res.sendFile(path.join(__dirname, './client/build/index.html'));
         });
   console.log(path.join(__dirname, './client/build/index.html'));
