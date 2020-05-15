@@ -3,6 +3,7 @@ const mongoose =require('mongoose');
 const deployments=require('./routes/api/deployments');
 const  cors =require('cors');
 const bodyparser=require('body-parser');
+const pat=require('path');
 var app=express();
 
 //getting db config 1
@@ -25,6 +26,9 @@ mongoose
 
   if(process.env.NODE_ENV==='production'){
       app.use(express.static('client/build'))
+      app.get("*",(req,res)=>{
+        res.sendFile(path.resolve(__dirname,'client','build','index.html'))
+      })
   }
 
 app.listen(port);
