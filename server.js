@@ -37,7 +37,8 @@ app.listen(port);
 
 
 /*
-{
+{  heroku config:set MONGODB_URI=mongodb+srv://user1:user1@cluster0-ay2zz.mongodb.net/test
+
     "_id": "5ebd5fc458b206264c524bcc",
     "url": "abc.com",
     "templateName": "templateName1",
