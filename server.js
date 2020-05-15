@@ -25,14 +25,16 @@ mongoose
   app.use('/',deployments);
   process.env.PWD=process.cwd();
 
-  if (process.env.NODE_ENV === "production") {
-    // Set static folder
-    app.use('/', express.static("./client/build"));
-
-    app.get("*", (req, res) => {
-      res.sendFile(path.resolve(__dirname, "client","build", "index.html"));
+ 
+    // Exprees will serve up production assets
+    app.use(express.static('client/build'));
+    console.log(__dirname);
+    // Express serve up index.html file if it doesn't recognize route
+    //const path = require('path');
+    app.get('*', (req, res) => {
+      res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
     });
-  }
+  
 
 
 app.listen(port);
